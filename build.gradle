@@ -3,7 +3,6 @@ plugins {
     id 'io.spring.dependency-management' version '1.0.9.RELEASE'
     id 'java'
     id 'jacoco'
-    id 'com.github.kt3k.coveralls' version '2.10.1'
 }
 
 group = 'com.example'
@@ -16,10 +15,11 @@ jacoco {
 
 jacocoTestReport {
     reports {
-        xml.enabled = true // coveralls plugin depends on xml format report
+        xml.enabled = true // codecov depends on xml format report
         html.enabled = true
     }
 }
+
 configurations {
     compileOnly {
         extendsFrom annotationProcessor

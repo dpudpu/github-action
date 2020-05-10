@@ -18,4 +18,8 @@ class UserTest {
         assertThat(user.b()).isEqualTo(2);
     }
 
+    @Test
+    void cTest() {
+        assertThat(user.c()).isEqualTo(3);
+    }
 }
